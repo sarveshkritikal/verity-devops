@@ -58,7 +58,7 @@ pipeline {
 		
 		
 		
-//Code starts for stage Tomcat Server Up
+		//Code starts for stage Tomcat Server Up
 		stage('Tomcat Server Up') {
             steps {
                 sh '/tmp/apache-tomcat-9.0.20/bin/startup.sh'
@@ -66,6 +66,15 @@ pipeline {
         }
 		//Code ends for stage Tomcat Server Up
 		
+
+	
+		//Code starts for stage War Deployed on Tomcat Server
+		stage('War Deployed on Tomcat Server') {
+            steps {
+                sh 'cp /var/jenkins_home/workspace/verity-devops/target/ExpenseApp-1.war /tmp/apache-tomcat-9.0.20/webapps'
+            }
+        }
+		//Code ends for stage War Deployed on Tomcat Server
 		
 		
     }
