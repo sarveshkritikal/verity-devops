@@ -67,7 +67,7 @@ public class UserServiceImpl implements UserService {
 		
 		// Buggy Code(UserServiceTest.saveUserTest())
 			//user.setUsername("Uth");
-			return user;
+			//return user;
 
 		// Correct Code
 			user.setPassword(passwordEncoder.encode(user.getPassword()));
