@@ -58,6 +58,15 @@ pipeline {
 		
 		
 		
+//Code starts for stage Tomcat Server Up
+		stage('Tomcat Server Up') {
+            steps {
+                sh '/tmp/apache-tomcat-9.0.20/bin/startup.sh'
+            }
+        }
+		//Code ends for stage Tomcat Server Up
+		
+		
 		
     }
 }
