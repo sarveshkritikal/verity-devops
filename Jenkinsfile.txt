@@ -9,15 +9,15 @@ pipeline {
                 sh 'mvn clean'
             }
         }
-		 //Code ends for stage clean
+		/* //Code ends for stage clean
 		
                 //Code starts for stage PMD
-	//	stage('PMD') {
-        //    steps {
-          //      sh 'mvn site'
-         //   }
-      //  }
-		//Code ends for stage PMD 
+		stage('PMD') {
+            steps {
+                sh 'mvn site'
+           }
+       }
+		//Code ends for stage PMD */
 
             //Code starts for stage Compile
        		stage('Compile') {
